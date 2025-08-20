@@ -310,6 +310,13 @@ struct Foo<#[my_flexible_clone(unbounded)] H> {
 }
 ```
 
+## Instantiation
+
+r[items.generics.instantiation]
+When using an item its generic parameters have to get instantiated.
+
+Instantiating the generic parameters of an item requires proving its where clauses.
+
 [array repeat expression]: ../expressions/array-expr.md
 [arrays]: ../types/array.md
 [slices]: ../types/slice.md

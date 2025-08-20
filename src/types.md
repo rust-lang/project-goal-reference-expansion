@@ -149,6 +149,31 @@ enum List<T> {
 let a: List<i32> = List::Cons(7, Box::new(List::Cons(13, Box::new(List::Nil))));
 ```
 
+## Equality of types
+
+r[types.equality]
+
+Equality and subtyping of types is generally structural; if the outermost type constructors are the same,
+their corresponding generic arguments are pairwise compared. We say types with this equality behavior are *rigid*. The only exceptions from this rule are higher ranked types and alias types.
+
+r[types.equality.rigid]
+
+r[types.equality.aliases]
+
+Aliases are compared by first normalizing them to a *rigid* type and then equating their type constructors and recursing into their generic arguments.
+
+r[types.equality.higher-ranked]
+
+Function pointers and trait objects may be higher-ranked.
+
+r[types.equality.higher-ranked.sub]
+
+Subtyping is checked by instantiating the `for` of the subtype with inference variables and the `for` of the supertype with placeholders before relating them as normal.
+
+r[types.equality.higher-ranked.eq]
+
+Equality is checked by both instantiating the `for` of one type with inference variables and the `for` of the other type with placeholders before equating them, and then doing the opposite.
+
 [Array]: types/array.md
 [Boolean]: types/boolean.md
 [Closures]: types/closure.md
