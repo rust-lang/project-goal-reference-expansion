@@ -2,6 +2,8 @@
 
 [Introduction](introduction.md)
 
+- [Expansion Outline](expansion-outline.md)
+
 - [Notation](notation.md)
 
 - [Lexical structure](lexical-structure.md)

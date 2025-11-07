@@ -1,5 +1,11 @@
 # Introduction
 
+> [!WARNING]
+> This is *not* the official Rust Reference. This is a demonstration of ongoing work as part of the "reference expansion" project goal. There are two key aspects of this demonstration:
+> 1) Stability guards for unstable and in-progress text
+> 2) Additional chapters and text, detailed in the [expansion-outline](expansion-outline.html) page.
+
+
 This book is the primary reference for the Rust programming language.
 
 > [!NOTE]
