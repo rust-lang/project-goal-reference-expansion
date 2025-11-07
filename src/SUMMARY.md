@@ -131,6 +131,8 @@
 
 - [The Rust runtime](runtime.md)
 
+- [Concurrency](concurrency.md)
+
 - [Appendices](appendices.md)
     - [Grammar summary](grammar.md)
     - [Syntax index](syntax-index.md)
