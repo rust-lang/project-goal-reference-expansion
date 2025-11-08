@@ -26,7 +26,7 @@ This document serves as a guide for editors and reviewers. Some conventions and 
     [block]: expressions/block-expr.md
     [enumerations]: types/enum.md
     ```
-* See the [Conventions] section for formatting callouts such as notes, edition differences, and warnings.
+* See the [Conventions] section for formatting callouts such as notes, edition differences, warnings, and stability markers.
 
 There are automated checks for some of these rules. Run `cargo xtask style-check` to run them locally.
 
@@ -191,6 +191,26 @@ Admonitions use a style similar to GitHub-flavored markdown, where the style nam
 ```
 
 The color and styling is defined in [`theme/reference.css`](https://github.com/rust-lang/reference/blob/master/theme/reference.css) and the transformation and icons are in [`mdbook-spec/src/admonitions.rs`](https://github.com/rust-lang/reference/blob/HEAD/mdbook-spec/src/admonitions.rs).
+
+### Stability markers
+
+The Reference supports stability markers, to allow collaborating on text documenting unstable Rust features, or text that's still a work in progress:
+
+```markdown
+<unstable-text>
+This text documents stable Rust, but the text itself is not considered stable.
+</unstable-text>
+
+<unstable-rust feature = "name">
+This text documents the unstable Rust feature "name". Both the feature and the text documenting it are unstable.
+</unstable-text>
+```
+
+These markers use HTML-like tags to allow wrapping them over large swaths of text (e.g entire sections) without having to place the entire section in a `> ` blockquote.
+
+Text delimited with stability markers can have arbitrary markdown inside, as well as admonitions or other stability markers.
+
+The color and styling is defined in `theme/reference.css` and the transformation is in `mdbook-spec/src/stability.rs`.
 
 ## Style
 

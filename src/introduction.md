@@ -97,6 +97,18 @@ These conventions are documented here.
   > [!WARNING]
   > This is an example warning.
 
+* Documentation for unstable (nightly-only) Rust features is separated into unstable blocks:
+
+  <unstable-rust feature = "example_feature_name">
+  This text documents the behavior of an unstable feature. Both the feature and the text documenting it are unstable.
+  </unstable-rust>
+
+* Documentation for stable Rust that is still a work in progress is separated into unstable blocks:
+
+  <unstable-text>
+  This text is a work in progress, and is still unstable.
+  </unstable-text>
+
 * Code snippets inline in the text are inside `<code>` tags.
 
   Longer code examples are in a syntax highlighted box that has controls for copying, executing, and showing hidden lines in the top right corner.
