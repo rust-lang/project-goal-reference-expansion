@@ -408,10 +408,12 @@ main > .rule {
     container-name: rule;
 }
 
-.rule-link {
+main > .rule .rule-link {
     float: right;
     text-align: right;
     padding-right: 10px;
+}
+.rule-link {
     /* We add `<wbr>` ourselves and only want breaks there */
     word-break: keep-all;
     /* Remove the blue coloring of links on rules that mdbook normally sets. */
@@ -499,16 +501,16 @@ main > .rule {
 }
 
 /* Align rules to various siblings */
-.rule:has(+ p, + .tests-popup + p),
-.rule:has(+ ul, + .tests-popup + ul) {
+main > .rule:has(+ p, + .tests-popup + p),
+main > .rule:has(+ ul, + .tests-popup + ul) {
     margin-top: calc((1em - var(--font-size)) / var(--font-size-mult) / 2);
 }
 
-.rule:has(+ h1, + .tests-popup + h1) {
+main > .rule:has(+ h1, + .tests-popup + h1) {
     align-self: center;
 }
 
-.rule:has(+ h2, + .tests-popup + h2) {
+main > .rule:has(+ h2, + .tests-popup + h2) {
     /* multiplying by this turns h2's em into .rule's em*/
     --h2-em-mult: calc(
         (1 / var(--font-size-mult)) /* to main font size */
@@ -522,7 +524,7 @@ main > .rule {
         + (1em * var(--h2-em-mult) - 1em) / 2
     );
 }
-.rule:has(+ h3, + .tests-popup + h3) {
+main > .rule:has(+ h3, + .tests-popup + h3) {
     /* multiplying by this turns h3's em into .rule's em*/
     --h3-em-mult: calc(
         (1 / var(--font-size-mult)) /* to main font size */
@@ -537,7 +539,7 @@ main > .rule {
     );
 }
 
-.rule:has(+ h4, + .tests-popup + h4) {
+main > .rule:has(+ h4, + .tests-popup + h4) {
     /* multiplying by this turns h4's em into .rule's em*/
     --h4-em-mult: calc(
         (1 / var(--font-size-mult)) /* to main font size */
@@ -552,7 +554,7 @@ main > .rule {
     );
 }
 
-.rule:has(+ h5, + .tests-popup + h5) {
+main > .rule:has(+ h5, + .tests-popup + h5) {
     /* multiplying by this turns h5's em into .rule's em*/
     --h5-em-mult: calc(
         (1 / var(--font-size-mult)) /* to main font size */
@@ -567,7 +569,7 @@ main > .rule {
     );
 }
 
-.rule:has(+ h6, + .tests-popup + h6) {
+main > .rule:has(+ h6, + .tests-popup + h6) {
     /* multiplying by this turns h6's em into .rule's em*/
     --h6-em-mult: calc(
         (1 / var(--font-size-mult)) /* to main font size */
