@@ -17,6 +17,7 @@ use std::path::PathBuf;
 mod admonitions;
 pub mod grammar;
 mod rules;
+mod stability;
 mod std_links;
 mod test_links;
 
@@ -216,6 +217,7 @@ impl Preprocessor for Spec {
                 return;
             }
             ch.content = admonitions::admonitions(&ch, &mut diag);
+            ch.content = stability::preprocess_markers(&ch, &mut diag);
             ch.content = self.rule_link_references(&ch, &rules);
             ch.content = self.auto_link_references(&ch, &rules);
             ch.content = self.render_rule_definitions(&ch.content, &tests, &git_ref);

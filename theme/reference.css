@@ -15,6 +15,8 @@
     --alert-warning-color: #9a6700;
     --alert-edition-color: #1a7f37;
     --alert-example-color: #8250df;
+    --alert-unstable-rust-color: #aa0000;
+    --alert-unstable-text-color: #663399;
     --grammar-literal-bg: #fafafa;
 }
 .rust {
@@ -22,6 +24,8 @@
     --alert-warning-color: #603700;
     --alert-edition-color: #008200;
     --alert-example-color: #8250df;
+    --alert-unstable-rust-color: #aa0000;
+    --alert-unstable-text-color: #663399;
     --grammar-literal-bg: #dedede;
 }
 .light, .rust {
@@ -33,6 +37,8 @@
     --alert-warning-color: #d29922;
     --alert-edition-color: #3fb950;
     --alert-example-color: #ab7df8;
+    --alert-unstable-rust-color: #aa0000;
+    --alert-unstable-text-color: #663399;
     --grammar-literal-bg: #1d1f21;
 }
 .ayu {
@@ -40,6 +46,8 @@
     --alert-warning-color: #f0b72f;
     --alert-edition-color: #2bd853;
     --alert-example-color: #d3abff;
+    --alert-unstable-rust-color: #aa0000;
+    --alert-unstable-text-color: #663399;
     --grammar-literal-bg: #191f26;
 }
 .coal, .navy, .ayu {
@@ -73,7 +81,7 @@ Admonitions are defined with blockquotes:
 
 See mdbook-spec/src/admonitions.rs.
 */
-.alert blockquote {
+.alert > blockquote {
     /* Add some padding to make the vertical bar a little taller than the text.*/
     padding: 8px 0px 8px 20px;
     /* Add a solid color bar on the left side. */
@@ -98,11 +106,11 @@ See mdbook-spec/src/admonitions.rs.
        Important to override .alert p rule. */
     margin: 0 0 8px 0 !important;
 }
-.alert blockquote > :nth-child(2) {
+.alert > blockquote > :nth-child(2) {
     /* Default margins of content just below the label add too much space. */
     margin-top: 0;
 }
-.alert blockquote > :last-child {
+.alert > blockquote > :last-child {
     /* Default margins of content add too much space. */
     margin-bottom: 0;
 }
@@ -113,25 +121,31 @@ See mdbook-spec/src/admonitions.rs.
     margin-right: 8px;
 }
 
-.alert-note blockquote {
+.alert-note > blockquote {
     border-inline-start-color: var(--alert-note-color);
 }
-.alert-warning blockquote {
+.alert-warning > blockquote {
     border-inline-start-color: var(--alert-warning-color);
 }
-.alert-edition blockquote {
+.alert-edition > blockquote {
     border-inline-start-color: var(--alert-edition-color);
 }
-.alert-example blockquote {
+.alert-example > blockquote {
     border-inline-start-color: var(--alert-example-color);
 }
-.alert-note .alert-title {
+.alert-unstable-rust > blockquote {
+    border-inline-start-color: var(--alert-unstable-rust-color);
+}
+.alert-unstable-text > blockquote {
+    border-inline-start-color: var(--alert-unstable-text-color);
+}
+.alert-note > blockquote > .alert-title {
     color: var(--alert-note-color);
 }
-.alert-warning .alert-title {
+.alert-warning > blockquote > .alert-title {
     color: var(--alert-warning-color);
 }
-.alert-edition .alert-title {
+.alert-edition > blockquote > .alert-title {
     color: var(--alert-edition-color);
 }
 /* Puts a rounded rectangle around the edition date. */
@@ -145,6 +159,12 @@ See mdbook-spec/src/admonitions.rs.
 }
 .alert-example .alert-title {
     color: var(--alert-example-color);
+}
+.alert-unstable-rust > blockquote > .alert-title {
+    color: var(--alert-unstable-rust-color);
+}
+.alert-unstable-text > blockquote > .alert-title {
+    color: var(--alert-unstable-text-color);
 }
 
 /* <kbd> tags can be used to highlight specific character elements. */
