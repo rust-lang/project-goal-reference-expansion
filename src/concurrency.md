@@ -1,3 +1,4 @@
+<unstable-text>
 r[concurrency]
 # Concurrency
 
@@ -256,3 +257,5 @@ This behavior follows from the desugaring of an `async fn` into a function that 
 [`FnMut`]: https://doc.rust-lang.org/stable/core/ops/trait.FnMut.html
 [`FnOnce`]: https://doc.rust-lang.org/stable/core/ops/trait.FnOnce.html
 [`async` function]: items/functions.md#async-functions
+
+</unstable-text>
