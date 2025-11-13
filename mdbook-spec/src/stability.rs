@@ -82,7 +82,7 @@ pub fn preprocess_markers(chapter: &Chapter, diag: &mut Diagnostics) -> String {
                         \n",
                     )
                 }
-                (true, "text" | "rust", None) => format!("{space}</blockquote></div>"),
+                (true, "text" | "rust", None) => format!("{space}</blockquote></div>\n"),
                 (_, ty, _) => {
                     warn_or_err!(
                         diag,
