@@ -18,3 +18,4 @@
   - [Macro invocation name resolution](./macros.md#r-macro.invocation.name-resolution)
   - [Note on sub namespaces](./names/namespaces.md#r-names.namespaces.sub-namespaces)
   - [Derive attributes scope](./procedural-macros.md#r-macro.proc.derive.attributes.scope)
+- [Concurrency](./concurrency.md)
