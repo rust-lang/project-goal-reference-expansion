@@ -97,13 +97,13 @@ These conventions are documented here.
   > [!WARNING]
   > This is an example warning.
 
-* Documentation for unstable (nightly-only) Rust features is separated into unstable blocks:
+* <a id="unstable-rust" href="#unstable-rust">#</a> Documentation for unstable (nightly-only) Rust features is separated into unstable blocks:
 
   <unstable-rust feature = "example_feature_name">
   This text documents the behavior of an unstable feature. Both the feature and the text documenting it are unstable.
   </unstable-rust>
 
-* Documentation for stable Rust that is still a work in progress is separated into unstable blocks:
+* <a id="unstable-text" href="#unstable-text">#</a> Documentation for stable Rust that is still a work in progress is separated into unstable blocks:
 
   <unstable-text>
   This text is a work in progress, and is still unstable.
