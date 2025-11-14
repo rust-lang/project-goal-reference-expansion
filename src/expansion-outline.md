@@ -13,9 +13,16 @@
   - [Alias types](./types/alias-types.md)
   - [Trait bounds](./trait-bounds.md#r-bound.global)
   - [Type equality](./types.md#r-types.equality)
+- Macro expansion
+  - [Existing work](./macros.md)
+  - Further work in progress
 - [Name resolution](./names/name-resolution.md)
   - [Macros by example](./macros-by-example.md#r-macro.decl.scope.textual.shadow.path-based)
   - [Macro invocation name resolution](./macros.md#r-macro.invocation.name-resolution)
   - [Note on sub namespaces](./names/namespaces.md#r-names.namespaces.sub-namespaces)
   - [Derive attributes scope](./procedural-macros.md#r-macro.proc.derive.attributes.scope)
+- Const eval
+  - [Existing work](./const_eval.md)
+  - Further work in progress
 - [Concurrency](./concurrency.md)
+- [Frontmatter](./frontmatter.md)
