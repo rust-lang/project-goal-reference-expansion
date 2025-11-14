@@ -1,5 +1,8 @@
 # "Reference Expansion" Project Goal Content
 
+- [Stability markers](./introduction.md#conventions)
+  - Stability markers for documentation of Rust features still in development
+  - Stability markers for Reference text that's still in development
 - [Divergence](./divergence.md)
   - [Diverging block types](./expressions/block-expr.md#r-expr.block.type.diverging)
   - [Diverging if statements](./expressions/if-expr.md#r-expr.if.diverging)
