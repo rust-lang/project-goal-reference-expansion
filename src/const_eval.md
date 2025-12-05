@@ -55,7 +55,7 @@ r[const-eval.const-expr.array]
 * [Array expressions].
 
 r[const-eval.const-expr.constructor]
-* [Struct] expressions.
+* [Struct expressions].
 
 r[const-eval.const-expr.block]
 * [Block expressions], including `unsafe` and `const` blocks.
@@ -203,7 +203,23 @@ r[const-eval.const-expr.borrows]
   > See [issue #143129](https://github.com/rust-lang/rust/issues/143129) for more details.
 
 r[const-eval.const-expr.deref]
-* The [dereference operator] except for raw pointers.
+* [Dereference expressions].
+
+  ```rust,no_run
+  # use core::cell::UnsafeCell;
+  const _: u8 = unsafe {
+      let x: *mut u8 = &raw mut *&mut 0;
+      //                        ^^^^^^^
+      //             Dereference of mutable reference.
+      *x = 1; // Dereference of mutable pointer.
+      *(x as *const u8) // Dereference of constant pointer.
+  };
+  const _: u8 = unsafe {
+      let x = &UnsafeCell::new(0);
+      *x.get() = 1; // Mutation of interior mutable value.
+      *x.get()
+  };
+  ```
 
 r[const-eval.const-expr.group]
 
@@ -304,8 +320,8 @@ The types of a const function's parameters and return type are restricted to tho
 [constant expressions]: #constant-expressions
 [constants]:            items/constant-items.md
 [Const parameters]:     items/generics.md
-[dereference expression]: expressions/operator-expr.md#the-dereference-operator
-[dereference operator]: expressions/operator-expr.md#the-dereference-operator
+[dereference expression]: expr.deref
+[dereference expressions]: expr.deref
 [destructors]:          destructors.md
 [enum discriminants]:   items/enumerations.md#discriminants
 [expression statements]: statements.md#expression-statements
@@ -332,7 +348,7 @@ The types of a const function's parameters and return type are restricted to tho
 [range expressions]:    expressions/range-expr.md
 [slice]:                types/slice.md
 [statics]:              items/static-items.md
-[struct]:               expressions/struct-expr.md
+[Struct expressions]:   expressions/struct-expr.md
 [temporary lifetime extension]: destructors.scope.lifetime-extension
 [tuple enum variant]:   items/enumerations.md
 [tuple expressions]:    expressions/tuple-expr.md
