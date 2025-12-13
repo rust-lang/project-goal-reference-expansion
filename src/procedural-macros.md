@@ -240,6 +240,7 @@ A helper attribute for a derive macro is declared by adding its identifier to th
 > }
 > ```
 
+<unstable-text>
 r[macro.proc.derive.attributes.scope]
 When a derive macro invocation is applied to an item, the helper attributes introduced by that derive macro become in scope 1) for attributes that are applied to that item and are applied lexically after the derive macro invocation and 2) for attributes that are applied to fields and variants inside of the item.
 
@@ -256,7 +257,7 @@ When a derive macro invocation is applied to an item, the helper attributes intr
 > ```
 >
 > For more details, see [Rust issue #79202](https://github.com/rust-lang/rust/issues/79202).
-
+</unstable-text>
 
 <!-- template:attributes -->
 r[macro.proc.attribute]

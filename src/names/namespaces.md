@@ -117,6 +117,7 @@ This prevents one style from shadowing another.
 
 For example, the [`cfg` attribute] and the [`cfg` macro] are two different entities with the same name in the macro namespace, but they can still be used in their respective context.
 
+<unstable-text>
 <!-- ignore: requires external crates -->
 > [!NOTE]
 > `use` imports still cannot create duplicate bindings of the same name in a module or block, regardless of sub-namespace.
@@ -129,6 +130,7 @@ For example, the [`cfg` attribute] and the [`cfg` macro] are two different entit
 >
 > use myattr::mymac; // error[E0252]: the name `mymac` is defined multiple times.
 > ```
+</unstable-text>
 
 [Associated const declarations]: ../items/associated-items.md#associated-constants
 [Associated function declarations]: ../items/associated-items.md#associated-functions-and-methods
