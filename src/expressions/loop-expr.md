@@ -292,7 +292,9 @@ for x in 1..100 {
 assert_eq!(last, 12);
 ```
 
+<unstable-text>
 Thus, the `break` expression itself is diverging and has a type of [`!`](../types/never.md).
+</unstable-text>
 
 r[expr.loop.break.label]
 A `break` expression is normally associated with the innermost `loop`, `for` or `while` loop enclosing the `break` expression,
@@ -357,7 +359,9 @@ ContinueExpression -> `continue` LIFETIME_OR_LABEL?
 r[expr.loop.continue.intro]
 When `continue` is encountered, the current iteration of the associated loop body is immediately terminated, returning control to the loop *head*.
 
+<unstable-text>
 Thus, the `continue` expression itself has a type of [`!`](../types/never.md).
+</unstable-text>
 
 r[expr.loop.continue.while]
 In the case of a `while` loop, the head is the conditional operands controlling the loop.

@@ -73,6 +73,7 @@ let y = if 12 * 15 > 150 {
 assert_eq!(y, "Bigger");
 ```
 
+<unstable-text>
 r[expr.if.diverging]
 An `if` expression diverges if either the condition expression diverges or if all arms diverge.
 
@@ -97,6 +98,7 @@ fn diverging_arms() -> ! {
     }
 }
 ```
+
 
 r[expr.if.let]
 ## `if let` patterns
