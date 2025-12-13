@@ -93,6 +93,7 @@
         - [Impl trait type](types/impl-trait.md)
         - [Type parameters](types/parameters.md)
         - [Inferred type](types/inferred.md)
+        - [Alias types](types/alias-types.md)
     - [Dynamically sized types](dynamically-sized-types.md)
     - [Type layout](type-layout.md)
     - [Interior mutability](interior-mutability.md)
