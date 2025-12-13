@@ -1,3 +1,4 @@
+<unstable-text>
 r[names.resolution]
 # Name resolution
 
@@ -551,3 +552,5 @@ r[names.resolution.type-relative]
 [sub-namespace]: ../names/namespaces.md#r-names.namespaces.sub-namespaces
 [type-relative paths]: names.resolution.type-relative
 [visibility]: ../visibility-and-privacy.md
+
+</unstable-text>

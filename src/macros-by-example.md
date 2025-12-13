@@ -326,6 +326,7 @@ fn foo() {
 // m!(); // Error: m is not in scope.
 ```
 
+<unstable-text>
 r[macro.decl.scope.textual.shadow.path-based]
 Textual scope name bindings for macros shadow path-based scope bindings to macros.
 
@@ -427,6 +428,7 @@ pub use pub_m as pub_macro; // OK.
 pub use private_m; // ERROR: `private_m` is only public within
                    // the crate and cannot be re-exported outside.
 ```
+</unstable-text>
 
 <!-- template:attributes -->
 r[macro.decl.scope.macro_use]

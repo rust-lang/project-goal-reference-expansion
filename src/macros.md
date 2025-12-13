@@ -106,6 +106,7 @@ macro_rules! example {
 example!();
 ```
 
+<unstable-text>
 r[macro.invocation.name-resolution]
 
 Macros invocations can be resolved via two kinds of scopes:
@@ -115,6 +116,7 @@ Macros invocations can be resolved via two kinds of scopes:
 * Path-based scope
     * [Path-based scope `macro_rules`](macros-by-example.md#r-macro.decl.scope.path-based)
     * [Procedural macros]
+</unstable-text>
 
 [External blocks]: items/external-blocks.md
 [Macros by Example]: macros-by-example.md
