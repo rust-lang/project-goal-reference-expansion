@@ -63,6 +63,7 @@ assert_eq!(5, five);
 > [!NOTE]
 > As a control flow expression, if a block expression is the outer expression of an expression statement, the expected type is `()` unless it is followed immediately by a semicolon.
 
+<unstable-text>
 r[expr.block.type.diverging]
 A block is itself considered to be [diverging](../divergence.md) if all reachable control flow paths contain a [diverging expression](../divergence.md), unless that expression is a [place expression](../expressions.md#r-expr.place-value.place-memory-location) that is not read from.
 
@@ -107,6 +108,7 @@ fn diverging_place_not_read() -> () {
     let _ = foo.x;
 }
 ```
+</unstable-text>
 
 r[expr.block.value]
 Blocks are always [value expressions] and evaluate the last operand in value expression context.

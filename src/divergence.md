@@ -1,3 +1,4 @@
+<unstable-text>
 r[divergence]
 # Divergence
 
@@ -54,3 +55,4 @@ If a type to be inferred is only unified with diverging expressions, then that t
 > ```
 
 <!-- TODO: This last point should likely should be moved to a more general "type inference" section discussing generalization + unification. -->
+</unstable-text>

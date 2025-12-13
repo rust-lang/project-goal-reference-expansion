@@ -96,6 +96,7 @@ Every binding in each `|` separated pattern must appear in all of the patterns i
 r[expr.match.binding-restriction]
 Every binding of the same name must have the same type, and have the same binding mode.
 
+<unstable-text>
 r[expr.match.type]
 The type of the overall `match` expression is the [least upper bound](../type-coercions.md#r-coerce.least-upper-bound) of the individual match arms.
 
@@ -128,6 +129,7 @@ If either the scrutinee expression or all of the match arms diverge, then the en
 >    // Fails to compile because `a` has the type `Option<!>`.
 >    match a {}
 >```
+</unstable-text>
 
 r[expr.match.guard]
 ## Match guards
