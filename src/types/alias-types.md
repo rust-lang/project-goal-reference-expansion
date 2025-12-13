@@ -1,3 +1,4 @@
+<unstable-text>
 r[type.alias]
 
 Associated types and opaque types are considered *alias types*.
@@ -50,3 +51,4 @@ For all applicable candidates we
 - prefer where-bounds
 - then alias bounds
 - then impls
+</unstable-text>

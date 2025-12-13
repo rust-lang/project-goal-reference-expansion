@@ -44,6 +44,7 @@ certain common cases:
   `trait A { type B: Copy; }` is equivalent to
   `trait A where Self::B: Copy { type B; }`.
 
+<unstable-text>
 r[bound.global]
 
 Bounds which does not use the item's parameters or any higher-ranked lifetimes are considered global.
@@ -106,6 +107,7 @@ If there are multiple ways to satisfy a trait bound, some groups of candidate ar
 - global where-bounds (only relevant if it does not hold)
 
 > note: this candidate preference can result in incorrect errors and type mismatches, e.g. ...
+</unstable-text>
 
 r[bound.trait-object]
 Trait and lifetime bounds are also used to name [trait objects].

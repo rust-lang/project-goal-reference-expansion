@@ -149,6 +149,7 @@ enum List<T> {
 let a: List<i32> = List::Cons(7, Box::new(List::Cons(13, Box::new(List::Nil))));
 ```
 
+<unstable-text>
 ## Equality of types
 
 r[types.equality]
@@ -173,6 +174,7 @@ Subtyping is checked by instantiating the `for` of the subtype with inference va
 r[types.equality.higher-ranked.eq]
 
 Equality is checked by both instantiating the `for` of one type with inference variables and the `for` of the other type with placeholders before equating them, and then doing the opposite.
+</unstable-text>
 
 [Array]: types/array.md
 [Boolean]: types/boolean.md
