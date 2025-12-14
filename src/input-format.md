@@ -59,10 +59,12 @@ This prevents an [inner attribute] at the start of a source file being removed.
 > [!NOTE]
 > The standard library [`include!`] macro applies byte order mark removal, CRLF normalization, and shebang removal to the file it reads. The [`include_str!`] and [`include_bytes!`] macros do not.
 
+<unstable-rust feature="frontmatter">
 r[input.frontmatter]
 ## Frontmatter removal
 
 After some whitespace, [frontmatter] may next appear in the input.
+</unstable-rust>
 
 r[input.tokenization]
 ## Tokenization
